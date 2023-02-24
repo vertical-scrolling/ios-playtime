@@ -1,3 +1,3 @@
-# DesignSystem
+# PTDesignSystem
 
 PlayTime design system.
