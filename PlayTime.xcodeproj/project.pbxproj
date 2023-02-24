@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2165A5729A923F900CB2048 /* PTDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A2165A5629A923F900CB2048 /* PTDesignSystem */; };
+		A2165A5929A9240300CB2048 /* PTClient in Frameworks */ = {isa = PBXBuildFile; productRef = A2165A5829A9240300CB2048 /* PTClient */; };
+		A2500B6C29A9251F00142248 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2500B6B29A9251F00142248 /* UIView+Utils.swift */; };
 		A262099029A90EC3000D19C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262098F29A90EC3000D19C2 /* AppDelegate.swift */; };
 		A262099229A90EC3000D19C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262099129A90EC3000D19C2 /* SceneDelegate.swift */; };
 		A262099429A90EC3000D19C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262099329A90EC3000D19C2 /* ViewController.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2165A5329A9112200CB2048 /* PTClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PTClient; path = Packages/PTClient; sourceTree = "<group>"; };
+		A2165A5429A9114800CB2048 /* PTDesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PTDesignSystem; path = Packages/PTDesignSystem; sourceTree = "<group>"; };
+		A2500B6B29A9251F00142248 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		A262098C29A90EC3000D19C2 /* PlayTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A262098F29A90EC3000D19C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A262099129A90EC3000D19C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +55,6 @@
 		A26209AC29A90EC5000D19C2 /* PlayTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26209B029A90EC5000D19C2 /* PlayTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTimeUITests.swift; sourceTree = "<group>"; };
 		A26209B229A90EC5000D19C2 /* PlayTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A26209C029A90F45000D19C2 /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DesignSystem; path = Packages/DesignSystem; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2165A5729A923F900CB2048 /* PTDesignSystem in Frameworks */,
+				A2165A5929A9240300CB2048 /* PTClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +84,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2165A5529A923F900CB2048 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2500B6A29A9250F00142248 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A2500B6B29A9251F00142248 /* UIView+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A262098329A90EC3000D19C2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,7 @@
 				A26209A529A90EC5000D19C2 /* PlayTimeTests */,
 				A26209AF29A90EC5000D19C2 /* PlayTimeUITests */,
 				A262098D29A90EC3000D19C2 /* Products */,
+				A2165A5529A923F900CB2048 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +127,7 @@
 				A262098F29A90EC3000D19C2 /* AppDelegate.swift */,
 				A262099129A90EC3000D19C2 /* SceneDelegate.swift */,
 				A262099329A90EC3000D19C2 /* ViewController.swift */,
+				A2500B6A29A9250F00142248 /* Utils */,
 				A262099529A90EC3000D19C2 /* Main.storyboard */,
 				A262099829A90EC5000D19C2 /* Assets.xcassets */,
 				A262099A29A90EC5000D19C2 /* LaunchScreen.storyboard */,
@@ -132,7 +156,8 @@
 		A26209BF29A90F45000D19C2 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				A26209C029A90F45000D19C2 /* DesignSystem */,
+				A2165A5329A9112200CB2048 /* PTClient */,
+				A2165A5429A9114800CB2048 /* PTDesignSystem */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -153,6 +178,10 @@
 			dependencies = (
 			);
 			name = PlayTime;
+			packageProductDependencies = (
+				A2165A5629A923F900CB2048 /* PTDesignSystem */,
+				A2165A5829A9240300CB2048 /* PTClient */,
+			);
 			productName = PlayTime;
 			productReference = A262098C29A90EC3000D19C2 /* PlayTime.app */;
 			productType = "com.apple.product-type.application";
@@ -270,6 +299,7 @@
 			files = (
 				A262099429A90EC3000D19C2 /* ViewController.swift in Sources */,
 				A262099029A90EC3000D19C2 /* AppDelegate.swift in Sources */,
+				A2500B6C29A9251F00142248 /* UIView+Utils.swift in Sources */,
 				A262099229A90EC3000D19C2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +480,8 @@
 				DEVELOPMENT_TEAM = G35JFM43J2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlayTime/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PlayTime;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -478,6 +510,8 @@
 				DEVELOPMENT_TEAM = G35JFM43J2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlayTime/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PlayTime;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -612,6 +646,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A2165A5629A923F900CB2048 /* PTDesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PTDesignSystem;
+		};
+		A2165A5829A9240300CB2048 /* PTClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PTClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A262098429A90EC3000D19C2 /* Project object */;
 }
