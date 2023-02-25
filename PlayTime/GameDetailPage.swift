@@ -114,8 +114,8 @@ final class GameDetailPage: UIViewController {
     }()
 
     private lazy var playedStatusPill: PTPillButton = {
-        let button = PTPillButton(title: "Played") { [weak self] in
-            self?.updateGameStatus(with: .played)
+        let button = PTPillButton(title: "Completed") { [weak self] in
+            self?.updateGameStatus(with: .completed)
         }
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -134,6 +134,27 @@ final class GameDetailPage: UIViewController {
         stack.axis = .vertical
         stack.spacing = 10
         return stack
+    }()
+
+    private var rawgInfoLabel: UIButton = {
+        let label = PTLabel()
+        var style: PTLabelStyle = .pt3XS
+        label.style = style.withWeight(.light)
+        label.text = "Data by RAWG API"
+        label.textColor = .white
+        var configuration = UIButton.Configuration.plain()
+        configuration.buttonSize = .mini
+        configuration.titleAlignment = .center
+        configuration.attributedTitle = AttributedString(label.attributedText ?? NSAttributedString(string: ""))
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addAction(UIAction { _ in
+            if let link = URL(string: "https://rawg.io") {
+                UIApplication.shared.open(link)
+            }
+        }, for: .touchUpInside)
+        button.configuration = configuration
+        return button
     }()
 
     private var imageDownloadTask: DownloadTask?
@@ -176,7 +197,7 @@ private extension GameDetailPage {
         if let playTime = game?.playTime {
             playtimeLabel.text = "Playtime: \(playTime)h"
         }
-        playedStatusPill.isSelected = game?.status == .played
+        playedStatusPill.isSelected = game?.status == .completed
         notPlayedStatusPill.isSelected = game?.status == .notPlayed
         descriptionTitleLabel.isHidden = (game?.description?.isEmpty != true)
         descriptionBodyLabel.text = game?.description
@@ -200,7 +221,8 @@ private extension GameDetailPage {
     func setupSubviews() {
         view.addSubviews([
             portrait,
-            container
+            container,
+            rawgInfoLabel,
         ])
         [nameLabel,
          ratingTitleLabel,
@@ -230,7 +252,11 @@ private extension GameDetailPage {
                                            constant: Constants.belowImage),
             container.leadingAnchor.constraint(equalTo: portrait.leadingAnchor),
             container.trailingAnchor.constraint(equalTo: portrait.trailingAnchor),
-            container.bottomAnchor.constraint(lessThanOrEqualTo: guide.bottomAnchor)
+            container.bottomAnchor.constraint(lessThanOrEqualTo: guide.bottomAnchor),
+            guide.trailingAnchor.constraint(equalTo: rawgInfoLabel.trailingAnchor,
+                                            constant: 17),
+            guide.bottomAnchor.constraint(equalTo: rawgInfoLabel.bottomAnchor,
+                                          constant: 17)
         ])
     }
 
@@ -243,7 +269,7 @@ private extension GameDetailPage {
                 try await PTClient.shared.updateGameStatus(gameID: gameID,
                                                            status: status)
                 notPlayedStatusPill.isSelected = status == .notPlayed
-                playedStatusPill.isSelected = status == .played
+                playedStatusPill.isSelected = status == .completed
             } catch {
                 debugPrint(String(describing: error))
             }

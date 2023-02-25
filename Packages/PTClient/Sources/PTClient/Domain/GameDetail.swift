@@ -8,24 +8,15 @@
 import Foundation
 
 public enum GamePlayStatus: String, Codable {
-    case played
+    case completed
     case notPlayed = "not_played"
 }
 
 struct GamePlayStatusPutObject: Codable {
-    enum Status: String, Codable {
-        case completed
-        case notPlayed = "not_played"
-    }
-    let status: Status
+    let status: GamePlayStatus
 
     init(status: GamePlayStatus) {
-        switch status {
-        case .played:
-            self.status = .completed
-        case .notPlayed:
-            self.status = .notPlayed
-        }
+        self.status = status
     }
 }
 
