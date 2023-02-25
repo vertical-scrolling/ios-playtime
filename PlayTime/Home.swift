@@ -10,11 +10,12 @@ import PTClient
 import PTDesignSystem
 
 final class Home: UIViewController {
-    private let grid: PTCatalogGrid = .initForAutolayout()
+    private lazy var grid: PTCatalogGrid = .init(router: self.navigationController as? PTNavigationController)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        grid.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(grid)
     }
 }
