@@ -16,4 +16,7 @@ public extension UIColor {
     static let whiteMain = UIColor(named: "WhiteMain", in: .module, compatibleWith: nil)!
     static let whiteShadow = UIColor(named: "WhiteShadow", in: .module, compatibleWith: nil)!
     static let whiteShine = UIColor(named: "WhiteShine", in: .module, compatibleWith: nil)!
+
+    //MARK: - Other colors
+    static let lightRed = UIColor(named: "LightRed", in: .module, compatibleWith: nil)!
 }

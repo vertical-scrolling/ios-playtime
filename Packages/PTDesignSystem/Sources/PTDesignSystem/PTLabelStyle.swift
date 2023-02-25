@@ -42,7 +42,7 @@ public enum PTFontSize {
         switch self {
         case .value(let value): return value
         case .size3XS: return 10
-        case .size2XS: return 12
+        case .size2XS: return 11
         case .sizeXS: return 12
         case .sizeS: return 13
         case .sizeM: return 14
@@ -119,7 +119,7 @@ public extension PTLabelStyle {
                                    lineHeight: 12,
                                    kerning: 0.2)
     static let pt2XS: Self = .init(size: .size2XS,
-                                   lineHeight: 13,
+                                   lineHeight: 15,
                                    kerning: 0.2)
     static let ptXS: Self = .init(size: .sizeXS,
                                   lineHeight: 14,
