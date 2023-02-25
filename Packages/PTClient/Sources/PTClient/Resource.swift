@@ -31,3 +31,15 @@ public struct PTGameDetailResource: PTResource {
         URLQueryItem(name: "user_id", value: userID)
     }
 }
+
+public struct PTGameStatusResource: PTResource {
+    public var path: String { "/users/\(userID)/games/\(gameID)/status" }
+    private let userID: String
+    private let gameID: String
+
+    init(userID: String,
+         gameID: String) {
+        self.userID = userID
+        self.gameID = gameID
+    }
+}

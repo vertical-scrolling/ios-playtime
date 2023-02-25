@@ -35,7 +35,7 @@ public class PTFilterRow: UIScrollView {
             $0.removeFromSuperview()
         }
         filters.forEach { filter in
-            let filterPill = PTFilterPill(title: filter.title) {
+            let filterPill = PTPillButton(title: filter.title) {
                 actionHandler(filter)
             }
             container.addArrangedSubview(filterPill)
@@ -48,7 +48,7 @@ public class PTFilterRow: UIScrollView {
             $0.removeFromSuperview()
         }
         parentFilters.forEach { filter in
-            let filterPill = PTFilterPill(title: filter.title) {
+            let filterPill = PTPillButton(title: filter.title) {
                 actionHandler(filter)
             }
             container.addArrangedSubview(filterPill)

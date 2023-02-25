@@ -3,6 +3,8 @@ import UIKit
 public protocol Client {
     func getGames(page: Int) async throws -> [Game]
     func getGameDetail(id: String) async throws -> GameDetail
+    func updateGameStatus(gameID: String,
+                          status: GamePlayStatus) async throws
 }
 
 public extension Client {
@@ -45,5 +47,24 @@ extension PTClient: Client {
         }
         let (data, _) = try await URLSession.shared.data(from: url)
         return try JSONDecoder().decode(GameDetail.self, from: data)
+    }
+
+    public func updateGameStatus(gameID: String,
+                                 status: GamePlayStatus) async throws {
+        guard let deviceID = await UIDevice.current.identifierForVendor?.uuidString else {
+            throw PTClientError.noEndpointURL
+        }
+        let gamesResource = PTGameStatusResource(userID: deviceID,
+                                                 gameID: gameID)
+        guard let url = PTEndpoint().urlComponents(for: gamesResource)?.url else {
+            throw PTClientError.noEndpointURL
+        }
+        let putObject = GamePlayStatusPutObject(status: status)
+        let jsonData = try JSONEncoder().encode(putObject)
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = jsonData
+        URLSession.shared.dataTask(with: request)
     }
 }

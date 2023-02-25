@@ -18,16 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="NL1-Zz-z62">
-                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <rect key="frame" x="76" y="289" width="241" height="499"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NL1-Zz-z62" secondAttribute="trailing" id="Ppx-PD-Ur4"/>
-                            <constraint firstItem="NL1-Zz-z62" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hL7-zi-qUf"/>
-                            <constraint firstItem="NL1-Zz-z62" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="oTb-dP-wOg"/>
-                            <constraint firstItem="NL1-Zz-z62" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tuQ-mR-eH9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerX" secondItem="NL1-Zz-z62" secondAttribute="centerX" id="Ppx-PD-Ur4"/>
+                            <constraint firstItem="NL1-Zz-z62" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="100" id="oTb-dP-wOg"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,7 +35,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splashScreen" width="360" height="800"/>
+        <image name="splashScreen" width="241" height="499"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
