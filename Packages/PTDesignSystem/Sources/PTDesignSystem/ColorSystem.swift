@@ -11,6 +11,7 @@ public extension UIColor {
     static let greenMain = UIColor(named: "GreenMain", in: .module, compatibleWith: nil)!
     static let greenShadow = UIColor(named: "GreenShadow", in: .module, compatibleWith: nil)!
     static let greenShine = UIColor(named: "GreenShine", in: .module, compatibleWith: nil)!
+    static let greenApp = UIColor(named: "GreenApp", in: .module, compatibleWith: nil)!
 
     //MARK: - Whites
     static let whiteMain = UIColor(named: "WhiteMain", in: .module, compatibleWith: nil)!
@@ -19,4 +20,7 @@ public extension UIColor {
 
     //MARK: - Other colors
     static let lightRed = UIColor(named: "LightRed", in: .module, compatibleWith: nil)!
+    static let lightBlue = UIColor(named: "LightBlue", in: .module, compatibleWith: nil)!
+    static let darkOrange = UIColor(named: "DarkOrange", in: .module, compatibleWith: nil)!
+    static let lightYellow = UIColor(named: "LightYellow", in: .module, compatibleWith: nil)!
 }

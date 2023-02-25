@@ -14,8 +14,8 @@ public final class MediaView: UIImageView {
 
     public func fetch(size: CGSize? = nil,
                       completionHandler: @escaping ((Result<RetrieveImageResult, KingfisherError>) -> Void)) -> DownloadTask? {
-        guard let media = media,
-              let url = URL(string: media.url) else {
+        guard let mediaURL = media?.url,
+              let url = URL(string: mediaURL) else {
             completionHandler(.failure(KingfisherError.imageSettingError(reason: .emptySource)))
             return nil
         }

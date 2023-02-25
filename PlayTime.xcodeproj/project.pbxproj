@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A20B874C29A992CA00D4575A /* PTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B874B29A992CA00D4575A /* PTNavigationController.swift */; };
+		A20B875029A9960900D4575A /* PTNavigationBarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B874F29A9960900D4575A /* PTNavigationBarHandler.swift */; };
 		A2165A5729A923F900CB2048 /* PTDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A2165A5629A923F900CB2048 /* PTDesignSystem */; };
 		A2165A5929A9240300CB2048 /* PTClient in Frameworks */ = {isa = PBXBuildFile; productRef = A2165A5829A9240300CB2048 /* PTClient */; };
+		A24F094C29AA1104006958F1 /* PTCatalogGridDataSource+Filtering.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F094B29AA1104006958F1 /* PTCatalogGridDataSource+Filtering.swift */; };
 		A2500B6C29A9251F00142248 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2500B6B29A9251F00142248 /* UIView+Utils.swift */; };
 		A25FD9BB29A956910065E0F0 /* PTCatalogGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25FD9BA29A956910065E0F0 /* PTCatalogGrid.swift */; };
 		A25FD9BF29A957210065E0F0 /* PTCatalogGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25FD9BE29A957210065E0F0 /* PTCatalogGridLayout.swift */; };
@@ -17,7 +20,7 @@
 		A25FD9C729A968D40065E0F0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A25FD9C629A968D40065E0F0 /* Kingfisher */; };
 		A262099029A90EC3000D19C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262098F29A90EC3000D19C2 /* AppDelegate.swift */; };
 		A262099229A90EC3000D19C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262099129A90EC3000D19C2 /* SceneDelegate.swift */; };
-		A262099429A90EC3000D19C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262099329A90EC3000D19C2 /* ViewController.swift */; };
+		A262099429A90EC3000D19C2 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262099329A90EC3000D19C2 /* Home.swift */; };
 		A262099729A90EC3000D19C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A262099529A90EC3000D19C2 /* Main.storyboard */; };
 		A262099929A90EC5000D19C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A262099829A90EC5000D19C2 /* Assets.xcassets */; };
 		A262099C29A90EC5000D19C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A262099A29A90EC5000D19C2 /* LaunchScreen.storyboard */; };
@@ -47,8 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A20B874B29A992CA00D4575A /* PTNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTNavigationController.swift; sourceTree = "<group>"; };
+		A20B874F29A9960900D4575A /* PTNavigationBarHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTNavigationBarHandler.swift; sourceTree = "<group>"; };
 		A2165A5329A9112200CB2048 /* PTClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PTClient; path = Packages/PTClient; sourceTree = "<group>"; };
 		A2165A5429A9114800CB2048 /* PTDesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PTDesignSystem; path = Packages/PTDesignSystem; sourceTree = "<group>"; };
+		A24F094B29AA1104006958F1 /* PTCatalogGridDataSource+Filtering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PTCatalogGridDataSource+Filtering.swift"; sourceTree = "<group>"; };
 		A2500B6B29A9251F00142248 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		A25FD9BA29A956910065E0F0 /* PTCatalogGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTCatalogGrid.swift; sourceTree = "<group>"; };
 		A25FD9BE29A957210065E0F0 /* PTCatalogGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTCatalogGridLayout.swift; sourceTree = "<group>"; };
@@ -57,7 +63,7 @@
 		A262098C29A90EC3000D19C2 /* PlayTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A262098F29A90EC3000D19C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A262099129A90EC3000D19C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A262099329A90EC3000D19C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A262099329A90EC3000D19C2 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		A262099629A90EC3000D19C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A262099829A90EC5000D19C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A262099B29A90EC5000D19C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,6 +113,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A24F094D29AA1563006958F1 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				A25FD9C029A958500065E0F0 /* PTCatalogGridDataSource.swift */,
+				A24F094B29AA1104006958F1 /* PTCatalogGridDataSource+Filtering.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
 		A2500B6A29A9250F00142248 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,10 +133,10 @@
 		A25FD9B929A9567A0065E0F0 /* PTCatalogGrid */ = {
 			isa = PBXGroup;
 			children = (
+				A24F094D29AA1563006958F1 /* Datasource */,
 				A25FD9C229A95AA20065E0F0 /* GridItems */,
 				A25FD9BA29A956910065E0F0 /* PTCatalogGrid.swift */,
 				A25FD9BE29A957210065E0F0 /* PTCatalogGridLayout.swift */,
-				A25FD9C029A958500065E0F0 /* PTCatalogGridDataSource.swift */,
 			);
 			path = PTCatalogGrid;
 			sourceTree = "<group>";
@@ -170,7 +185,9 @@
 				A262099129A90EC3000D19C2 /* SceneDelegate.swift */,
 				A28CDA9129A96B2D00B2AC2A /* Shared */,
 				A2500B6A29A9250F00142248 /* Utils */,
-				A262099329A90EC3000D19C2 /* ViewController.swift */,
+				A262099329A90EC3000D19C2 /* Home.swift */,
+				A20B874B29A992CA00D4575A /* PTNavigationController.swift */,
+				A20B874F29A9960900D4575A /* PTNavigationBarHandler.swift */,
 			);
 			path = PlayTime;
 			sourceTree = "<group>";
@@ -356,7 +373,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A262099429A90EC3000D19C2 /* ViewController.swift in Sources */,
+				A262099429A90EC3000D19C2 /* Home.swift in Sources */,
+				A24F094C29AA1104006958F1 /* PTCatalogGridDataSource+Filtering.swift in Sources */,
 				A25FD9BF29A957210065E0F0 /* PTCatalogGridLayout.swift in Sources */,
 				A25FD9C129A958500065E0F0 /* PTCatalogGridDataSource.swift in Sources */,
 				A262099029A90EC3000D19C2 /* AppDelegate.swift in Sources */,
@@ -364,9 +382,11 @@
 				A28CDA9629A9885D00B2AC2A /* GameGridHeaderView.swift in Sources */,
 				A25FD9C429A95AC00065E0F0 /* GameGridCell.swift in Sources */,
 				A28CDA9429A9757700B2AC2A /* GameGridCellViewModel.swift in Sources */,
+				A20B875029A9960900D4575A /* PTNavigationBarHandler.swift in Sources */,
 				A28CDA9029A9695900B2AC2A /* MediaView.swift in Sources */,
 				A2500B6C29A9251F00142248 /* UIView+Utils.swift in Sources */,
 				A262099229A90EC3000D19C2 /* SceneDelegate.swift in Sources */,
+				A20B874C29A992CA00D4575A /* PTNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +573,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -584,7 +604,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,13 +1,17 @@
 import UIKit
 
-public struct Game: Codable {
-    public let id: String
-    public let name: String
-    public let released: String
-    public let rating: Int
-    public let media: Media
+struct GamesCollection: Codable {
+    let games: [Game]
+}
 
-    public init(id: String, name: String, released: String, rating: Int, media: Media) {
+public struct Game: Codable {
+    public let id: String?
+    public let name: String?
+    public let released: String?
+    public let rating: Double?
+    public let media: Media?
+
+    public init(id: String?, name: String?, released: String?, rating: Double?, media: Media?) {
         self.id = id
         self.name = name
         self.released = released

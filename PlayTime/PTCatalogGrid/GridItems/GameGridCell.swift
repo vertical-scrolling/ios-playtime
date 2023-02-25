@@ -47,7 +47,7 @@ final class GameGridCell: UICollectionViewCell {
     private var portrait: MediaView = {
         let imageView = MediaView(frame: .zero)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
         return imageView
     }()
 
@@ -77,6 +77,7 @@ extension GameGridCell: ResponsiveCell {
             case .success(let value):
                 guard let self = self else { return }
                 self.portrait.image = value.image
+                self.portrait.contentMode = .scaleAspectFill
                 self.portrait.layoutIfNeeded()
             }
         }
@@ -110,7 +111,7 @@ private extension GameGridCell {
             ratingView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
             ratingView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor,
                                              constant: Constants.interItemSpacing),
-            ratingView.bottomAnchor.constraint(lessThanOrEqualTo: guide.bottomAnchor),
+            ratingView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
             releasedLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
             releasedLabel.centerYAnchor.constraint(equalTo: ratingView.centerYAnchor)
         ])

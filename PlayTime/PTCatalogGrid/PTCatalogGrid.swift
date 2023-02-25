@@ -20,6 +20,7 @@ final class PTCatalogGrid: UIView {
         view.register(GameGridHeaderView.self,
                       forSupplementaryViewOfKind: PTCatalogGridSupplementaryElementKind.gridHeader,
                       withReuseIdentifier: GameGridHeaderView.reuseIdentifier)
+        view.backgroundView = UIImageView(image: UIImage(named: "gridBackground"))
         return view
     }()
 
@@ -35,7 +36,7 @@ final class PTCatalogGrid: UIView {
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         self.fitToSuperview()
-        dataSource.loadItems()
+        dataSource.loadNextPage()
     }
 }
 
@@ -53,5 +54,6 @@ extension PTCatalogGrid: UICollectionViewDelegate {
         if let cell = cell as? ResponsiveCell {
             cell.loadImage()
         }
+        dataSource.loadNextIfNeededPage(forItemAt: indexPath)
     }
 }

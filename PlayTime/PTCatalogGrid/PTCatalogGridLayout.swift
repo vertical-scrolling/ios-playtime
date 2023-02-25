@@ -13,11 +13,10 @@ struct PTCatalogGridSupplementaryElementKind {
 
 final class PTCatalogGridLayout: UICollectionViewCompositionalLayout {
     private struct Constants {
-        static let groupHeight: NSCollectionLayoutDimension = .absolute(285)
         static let itemSize: NSCollectionLayoutSize = .init(widthDimension: .fractionalWidth(0.4853),
-                                                            heightDimension: groupHeight)
+                                                            heightDimension: .fractionalHeight(1.0))
         static let groupSize: NSCollectionLayoutSize = .init(widthDimension: .fractionalWidth(1.0),
-                                                             heightDimension: groupHeight)
+                                                             heightDimension: .absolute(265))
         static let groupInsets: NSDirectionalEdgeInsets = .init(horizontal: 21)
         static let interItemSpacing: NSCollectionLayoutSpacing = .fixed(8)
         static let interGroupSpacing: CGFloat = 24

@@ -8,10 +8,10 @@
 import PTClient
 
 protocol GameGridCellViewModel {
-    var name: String { get }
-    var released: String { get }
-    var rating: Int { get }
-    var media: Media { get }
+    var name: String? { get }
+    var released: String? { get }
+    var rating: Double? { get }
+    var media: Media? { get }
 }
 
 extension Game: GameGridCellViewModel { }
