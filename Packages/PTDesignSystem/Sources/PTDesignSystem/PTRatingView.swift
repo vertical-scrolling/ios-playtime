@@ -6,7 +6,7 @@ public class PTRatingView: UIView {
         static let ratingSquareSize: CGFloat = 10
     }
 
-    public var rating: Int? {
+    public var rating: Double? {
         didSet {
             setupSubviews()
         }
@@ -74,5 +74,31 @@ private extension PTRatingView {
             return
         }
         ratingLabel.text = String(rating)
+        setupRatingColors(rating: rating)
+    }
+
+    func setupRatingColors(rating: Double) {
+        let ratingsToTint = Int(rating.rounded(.down))
+        switch ratingsToTint {
+        case 1:
+            ratingSummary.arrangedSubviews[0].backgroundColor = .lightRed
+        case 2:
+            ratingSummary.arrangedSubviews[0...1].forEach {
+                $0.backgroundColor = .darkOrange
+            }
+        case 3:
+            ratingSummary.arrangedSubviews[0...2].forEach {
+                $0.backgroundColor = .lightYellow
+            }
+        case 4:
+            ratingSummary.arrangedSubviews[0...3].forEach {
+                $0.backgroundColor = .greenApp
+            }
+        case 5:
+            ratingSummary.arrangedSubviews.forEach {
+                $0.backgroundColor = .lightBlue
+            }
+        default: break
+        }
     }
 }

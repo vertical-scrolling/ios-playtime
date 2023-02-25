@@ -1,7 +1,7 @@
 import UIKit
 
 public struct Media: Codable {
-    public let url: String
+    public let url: String?
 
     public enum MediaError: Error {
         case invalidURL

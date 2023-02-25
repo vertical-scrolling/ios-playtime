@@ -9,7 +9,7 @@ import UIKit
 import PTClient
 import PTDesignSystem
 
-final class ViewController: UIViewController {
+final class Home: UIViewController {
     private let grid: PTCatalogGrid = .initForAutolayout()
 
     override func viewDidLoad() {
