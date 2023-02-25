@@ -2,6 +2,7 @@ import UIKit
 
 public protocol Client {
     func getGames(page: Int) async throws -> [Game]
+    func getGameDetail(id: String) async throws -> GameDetail
 }
 
 public extension Client {
@@ -23,11 +24,26 @@ extension PTClient: Client {
         guard var urlComponents = PTEndpoint().urlComponents(for: gamesResource) else {
             throw PTClientError.noEndpointURL
         }
-        urlComponents.queryItems = [gamesResource.page(page)]
+        urlComponents.queryItems = [gamesResource.pageQuery(for: page)]
         guard let url = urlComponents.url else {
             throw PTClientError.noEndpointURL
         }
         let (data, _) = try await URLSession.shared.data(from: url)
         return try JSONDecoder().decode(GamesCollection.self, from: data).games
+    }
+
+    public func getGameDetail(id: String) async throws -> GameDetail {
+        let gamesResource = PTGameDetailResource(id: id)
+        guard var urlComponents = PTEndpoint().urlComponents(for: gamesResource) else {
+            throw PTClientError.noEndpointURL
+        }
+        if let deviceKey = await UIDevice.current.identifierForVendor?.uuidString {
+            urlComponents.queryItems = [gamesResource.userQuery(for: deviceKey)]
+        }
+        guard let url = urlComponents.url else {
+            throw PTClientError.noEndpointURL
+        }
+        let (data, _) = try await URLSession.shared.data(from: url)
+        return try JSONDecoder().decode(GameDetail.self, from: data)
     }
 }

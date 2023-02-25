@@ -9,6 +9,7 @@ import UIKit
 
 final class PTCatalogGrid: UIView {
     private lazy var dataSource: PTCatalogGridDataSource = .init(collectionView: collectionView)
+    private var router: PTNavigationController?
 
     private lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero,
@@ -20,9 +21,14 @@ final class PTCatalogGrid: UIView {
         view.register(GameGridHeaderView.self,
                       forSupplementaryViewOfKind: PTCatalogGridSupplementaryElementKind.gridHeader,
                       withReuseIdentifier: GameGridHeaderView.reuseIdentifier)
-        view.backgroundView = UIImageView(image: UIImage(named: "gridBackground"))
+        view.backgroundView = UIImageView(image: UIImage(named: "tetrisPattern"))
         return view
     }()
+
+    convenience init(router: PTNavigationController?) {
+        self.init(frame: .zero)
+        self.router = router
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -55,5 +61,13 @@ extension PTCatalogGrid: UICollectionViewDelegate {
             cell.loadImage()
         }
         dataSource.loadNextIfNeededPage(forItemAt: indexPath)
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        if let router = router,
+           let id = dataSource.snapshot().itemIdentifiers[indexPath.item].id {
+            router.navigateToGameDetail(id: id)
+        }
     }
 }

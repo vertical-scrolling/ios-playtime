@@ -30,6 +30,8 @@
 		A28CDA9029A9695900B2AC2A /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28CDA8F29A9695900B2AC2A /* MediaView.swift */; };
 		A28CDA9429A9757700B2AC2A /* GameGridCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28CDA9329A9757700B2AC2A /* GameGridCellViewModel.swift */; };
 		A28CDA9629A9885D00B2AC2A /* GameGridHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28CDA9529A9885D00B2AC2A /* GameGridHeaderView.swift */; };
+		A2D9B58429AA44140047A246 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9B58329AA44140047A246 /* UserProfile.swift */; };
+		A2D9B58629AA52FF0047A246 /* GameDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9B58529AA52FF0047A246 /* GameDetailPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		A28CDA8F29A9695900B2AC2A /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
 		A28CDA9329A9757700B2AC2A /* GameGridCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridCellViewModel.swift; sourceTree = "<group>"; };
 		A28CDA9529A9885D00B2AC2A /* GameGridHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridHeaderView.swift; sourceTree = "<group>"; };
+		A2D9B58329AA44140047A246 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		A2D9B58529AA52FF0047A246 /* GameDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,8 @@
 				A28CDA9129A96B2D00B2AC2A /* Shared */,
 				A2500B6A29A9250F00142248 /* Utils */,
 				A262099329A90EC3000D19C2 /* Home.swift */,
+				A2D9B58329AA44140047A246 /* UserProfile.swift */,
+				A2D9B58529AA52FF0047A246 /* GameDetailPage.swift */,
 				A20B874B29A992CA00D4575A /* PTNavigationController.swift */,
 				A20B874F29A9960900D4575A /* PTNavigationBarHandler.swift */,
 			);
@@ -375,11 +381,13 @@
 			files = (
 				A262099429A90EC3000D19C2 /* Home.swift in Sources */,
 				A24F094C29AA1104006958F1 /* PTCatalogGridDataSource+Filtering.swift in Sources */,
+				A2D9B58429AA44140047A246 /* UserProfile.swift in Sources */,
 				A25FD9BF29A957210065E0F0 /* PTCatalogGridLayout.swift in Sources */,
 				A25FD9C129A958500065E0F0 /* PTCatalogGridDataSource.swift in Sources */,
 				A262099029A90EC3000D19C2 /* AppDelegate.swift in Sources */,
 				A25FD9BB29A956910065E0F0 /* PTCatalogGrid.swift in Sources */,
 				A28CDA9629A9885D00B2AC2A /* GameGridHeaderView.swift in Sources */,
+				A2D9B58629AA52FF0047A246 /* GameDetailPage.swift in Sources */,
 				A25FD9C429A95AC00065E0F0 /* GameGridCell.swift in Sources */,
 				A28CDA9429A9757700B2AC2A /* GameGridCellViewModel.swift in Sources */,
 				A20B875029A9960900D4575A /* PTNavigationBarHandler.swift in Sources */,
@@ -569,10 +577,11 @@
 				INFOPLIST_KEY_CFBundleDisplayName = PlayTime;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -600,10 +609,11 @@
 				INFOPLIST_KEY_CFBundleDisplayName = PlayTime;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

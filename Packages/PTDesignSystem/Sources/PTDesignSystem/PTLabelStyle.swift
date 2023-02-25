@@ -146,7 +146,7 @@ public extension PTLabelStyle {
                                    lineHeight: 28,
                                    kerning: 0.2)
     static let pt5XL: Self = .init(size: .size5XL,
-                                   lineHeight: 50,
+                                   lineHeight: 60,
                                    kerning: 0.2)
 }
 
